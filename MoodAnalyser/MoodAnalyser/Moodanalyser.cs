@@ -16,15 +16,22 @@ namespace MoodAnalyser
         }
         public string AnalyseMood() 
         {
-            if (message.Contains("SAD"))
+            try
             {
-                Console.WriteLine("The mood is SAD");
-                return "SAD";
+                if (message.Contains("SAD"))
+                {
+                    Console.WriteLine("The mood is SAD");
+                    return "SAD";
+                }
+                else
+                {
+                    Console.WriteLine("The mood is HAPPY");
+                    return "HAPPY";
+                }
             }
-            else
+            catch (NullReferenceException)
             {
-                Console.WriteLine("The mood is HAPPY");
-                return "HAPPY";
+                return "HAPPY"; 
             }
         }
     }
