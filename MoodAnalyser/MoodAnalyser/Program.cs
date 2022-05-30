@@ -5,8 +5,8 @@
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Mood Analysis");
-            Moodanalyser moodAnalyser = new Moodanalyser();
-            moodAnalyser.AnalyseMood("I am in any mood");
+            Moodanalyser moodAnalyser = new Moodanalyser("I am in any mood");
+            moodAnalyser.AnalyseMood();
         }
     }
 }
