@@ -45,7 +45,7 @@ namespace MoodAnalyserTestCases
         //uc2-2.1 :Handle null exception returns HAPPY
         //</summary>
         [Test]
-        public void Handle_NullException_return_HAPPY()
+        public void Handle_Null_Exception_returns_HAPPY() 
         {
             //Arrange
             string message = null;
