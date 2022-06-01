@@ -14,6 +14,10 @@ namespace MoodAnalyser
         {
             this.message = message;
         }
+        public Moodanalyser()
+        {
+            this.message = "I am in any mood";
+        }
         public string AnalyseMood() 
         {
             try
@@ -31,7 +35,8 @@ namespace MoodAnalyser
             }
             catch (NullReferenceException)
             {
-                throw new MoodanalyserCustomException(MoodanalyserCustomException.Exceptiontype.EMPTY_NULL, "The mood should not be null");
+                //throw new MoodanalyserCustomException(MoodanalyserCustomException.Exceptiontype.EMPTY_NULL, "The mood should not be null");
+                return "HAPPY";
             }
         }
     }
