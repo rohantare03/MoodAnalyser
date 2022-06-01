@@ -56,6 +56,46 @@ namespace MoodAnalyserTestCases
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        //<summary>
+        //uc3-3.1 :Given null mood throw custom exception
+        //</summary>
+        [Test]
+        public void Given_NullMood_Return_Custom_Exception()
+        {
+            //Arrange
+            string message = null;
+            string expected = "The mood should not be null";
+            try
+            {
+                //Act
+                moodAnalyser = new Moodanalyser(message);
+            }
+            catch (MoodanalyserCustomException exception)
+            {
+                //Assert
+                Assert.AreEqual(expected, exception.Message);
+            }
 
+        }
+        //<summary>
+        //uc3-3.2 :Given Empty mood throw custom exception
+        //</summary>
+        [Test]
+        public void Given_Empty_Mood_Returns_Custom_Exception()
+        {
+            //Arrange
+            string message = " ";
+            string expected = "The mood should not be null";
+            try
+            {
+                //Act
+                moodAnalyser = new Moodanalyser(message);
+            }
+            catch (MoodanalyserCustomException exception)
+            {
+                //Assert
+                Assert.AreEqual(expected, exception.Message);
+            }
+        }
     }
 }
